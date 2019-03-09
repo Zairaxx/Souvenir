@@ -13,7 +13,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Souvenir - Enhance your memories</title>
           {this.props.styleTags}
         </Head>
         <body>

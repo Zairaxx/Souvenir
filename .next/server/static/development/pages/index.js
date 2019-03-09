@@ -93,6 +93,1006 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/App.js":
+/*!***************************!*\
+  !*** ./components/App.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Hero */ "./components/Hero.js");
+/* harmony import */ var _components_SouvenirForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SouvenirForm */ "./components/SouvenirForm.js");
+/* harmony import */ var _components_Navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navigation */ "./components/Navigation.js");
+/* harmony import */ var _components_MySouvenirs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MySouvenirs */ "./components/MySouvenirs.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/components/App.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+var Flex = styled_components__WEBPACK_IMPORTED_MODULE_5___default.a.div.withConfig({
+  displayName: "App__Flex",
+  componentId: "sc-16jexjb-0"
+})(["background-color:", ";display:", ";position:", ";flex-direction:", ";align-items:", ";justify-content:", ";width:", ";height:", ";top:", ";min-width:", ";left:", ";right:", ";overflow:", ";overflow-y:", ";"], function (props) {
+  return props.bgColor || "auto";
+}, function (props) {
+  return props.display || "flex";
+}, function (props) {
+  return props.position || "auto";
+}, function (props) {
+  return props.direction || "column";
+}, function (props) {
+  return props.alignItems || "center";
+}, function (props) {
+  return props.justify || "center";
+}, function (props) {
+  return props.width || "auto";
+}, function (props) {
+  return props.height || "auto";
+}, function (props) {
+  return props.top || "0";
+}, function (props) {
+  return props.minWidth || "auto";
+}, function (props) {
+  return props.left || "auto";
+}, function (props) {
+  return props.right || "auto";
+}, function (props) {
+  return props.overflow || "auto";
+}, function (props) {
+  return props.overflowY || "auto";
+});
+
+var App =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(App, _Component);
+
+  function App() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, App);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      souvenirs: [{
+        name: "Vietnam livin",
+        location: "Ho chi Minh",
+        color: "blue",
+        audio: "www.spotify.com",
+        souvenirStory: "I had fun."
+      }]
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "addSouvenir", function (souvenir) {
+      souvenir.id = Math.random();
+      souvenir.date = "Today"; // moment().format('MMMM Do YYYY, h:mm:ss a');
+
+      var souvenirs = [].concat(_toConsumableArray(_this.state.souvenirs), [souvenir]);
+
+      _this.setState({
+        souvenirs: souvenirs
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getCollection", function () {
+      console.log("start function");
+      document.getElementById('pageTwo').setAttribute('style', 'left:200vw');
+      document.getElementById('pageOne').setAttribute('style', 'left:100vw');
+      document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:visible');
+      document.getElementById('collectionListPage').setAttribute('style', "left:0"); //For Firefox
+
+      console.log("finish function");
+    });
+
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        justify: "space-between",
+        height: "100vh",
+        overflow: "scroll",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        overflow: "scroll",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SouvenirForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        souvenirs: this.state.souvenirs,
+        addSouvenir: this.addSouvenir,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navigation__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        getCollection: this.getCollection,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }));
+    }
+  }]);
+
+  return App;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/Hero.js":
+/*!****************************!*\
+  !*** ./components/Hero.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/components/Hero.js";
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    from {\n      transform:translateY(10px);\n    }\n    to {\n        transform:translateY(50px);\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+var HeroText = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
+  displayName: "Hero__HeroText",
+  componentId: "sc-1kp3y8c-0"
+})(["@import url('https://fonts.googleapis.com/css?family=Oswald');font-family:'Oswald',cursive;font-size:5.6rem;color:#BFF;text-align:center;"]);
+var HeroBg = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Hero__HeroBg",
+  componentId: "sc-1kp3y8c-1"
+})(["display:flex;flex-direction:column;justify-content:space-around;align-items:center;background:#000;min-width:100vw;min-height:105vh;position:relative;"]);
+var scrollIt = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject());
+var HeroSlogan = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2.withConfig({
+  displayName: "Hero__HeroSlogan",
+  componentId: "sc-1kp3y8c-2"
+})(["@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC:700|Lobster');font-family:'Amatic SC',cursive;color:white;text-align:center;"]);
+var ScrollDown = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Hero__ScrollDown",
+  componentId: "sc-1kp3y8c-3"
+})(["animation:", " 1s linear infinite;"], scrollIt);
+
+var Hero = function Hero() {
+  var imgSrc = __webpack_require__(/*! ../images/scroll-arrow-light.png */ "./images/scroll-arrow-light.png");
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroBg, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, " Souvenir "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSlogan, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }), "Write it down. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), "Read it out loud. Listen closely. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), "Feel it all over again.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ScrollDown, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: imgSrc,
+    alt: "Scroll down to view more",
+    width: "120px",
+    height: "40px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
+
+/***/ }),
+
+/***/ "./components/MySouvenirs.js":
+/*!***********************************!*\
+  !*** ./components/MySouvenirs.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/components/MySouvenirs.js";
+
+
+var ElementContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "MySouvenirs__ElementContainer",
+  componentId: "sc-1ldl8qa-0"
+})(["display:flex;justify-content:", ";padding:", ";font-family:'Ubuntu',sans-serif;"], function (props) {
+  return props.center ? "center" : props.end ? "flex-end" : "flex-start";
+}, function (props) {
+  return props.center ? 0 : props.end ? "0 20px 0 0" : "0 0 0 20px";
+});
+
+var MySouvenirs = function MySouvenirs(_ref) {
+  var souvenirs = _ref.souvenirs;
+  var souvenirList = souvenirs.map(function (souvenir) {
+    if (souvenir !== 0) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post",
+        key: Math.random(),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ElementContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, souvenir.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ElementContainer, {
+        center: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, souvenir.location)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ElementContainer, {
+        center: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, souvenir.color)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ElementContainer, {
+        center: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, souvenir.souvenirStory))));
+    } else {
+      return "No posts!";
+    }
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, souvenirList);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MySouvenirs);
+
+/***/ }),
+
+/***/ "./components/Navigation.js":
+/*!**********************************!*\
+  !*** ./components/Navigation.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/components/Navigation.js";
+
+
+
+var Flex = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Navigation__Flex",
+  componentId: "h3v7yn-0"
+})(["background-color:", ";display:", ";position:", ";flex-direction:", ";align-items:", ";justify-content:", ";width:", ";height:", ";top:", ";min-width:", ";left:", ";right:", ";overflow:", ";margin:", ";"], function (props) {
+  return props.bgColor || "auto";
+}, function (props) {
+  return props.display || "flex";
+}, function (props) {
+  return props.position || "auto";
+}, function (props) {
+  return props.direction || "column";
+}, function (props) {
+  return props.alignItems || "center";
+}, function (props) {
+  return props.justify || "center";
+}, function (props) {
+  return props.width || "auto";
+}, function (props) {
+  return props.height || "auto";
+}, function (props) {
+  return props.top || "0";
+}, function (props) {
+  return props.minWidth || "auto";
+}, function (props) {
+  return props.left || "auto";
+}, function (props) {
+  return props.right || "auto";
+}, function (props) {
+  return props.overflow || "auto";
+}, function (props) {
+  return props.margin || "auto";
+});
+var NavItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Navigation__NavItem",
+  componentId: "h3v7yn-1"
+})(["margin:0px;border:1px solid black;width:100%;min-height:50px;text-align:center;display:flex;justify-content:center;align-items:center;cursor:pointer;"]);
+
+var Navigation = function Navigation(_ref) {
+  var getCollection = _ref.getCollection;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+    direction: "row",
+    minWidth: "100%",
+    justify: "space-around",
+    margin: "0 10px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavItem, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "Create new souvenir"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "button",
+    id: "prev-page",
+    onClick: getCollection,
+    value: "Get Collection page",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavItem, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "My Collection"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./components/SouvenirForm.js":
+/*!************************************!*\
+  !*** ./components/SouvenirForm.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SouvenirForm; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_MySouvenirs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MySouvenirs */ "./components/MySouvenirs.js");
+var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/components/SouvenirForm.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var InputField = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input.withConfig({
+  displayName: "SouvenirForm__InputField",
+  componentId: "sc-1929zk0-0"
+})(["text-align:center;margin-bottom:2em;width:30em;"]);
+var Flex = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "SouvenirForm__Flex",
+  componentId: "sc-1929zk0-1"
+})(["background-color:", ";display:", ";position:", ";flex-direction:", ";align-items:", ";justify-content:", ";width:", ";height:", ";top:", ";min-width:", ";left:", ";right:", ";overflow:", ";"], function (props) {
+  return props.bgColor || "auto";
+}, function (props) {
+  return props.display || "flex";
+}, function (props) {
+  return props.position || "auto";
+}, function (props) {
+  return props.direction || "column";
+}, function (props) {
+  return props.alignItems || "center";
+}, function (props) {
+  return props.justify || "center";
+}, function (props) {
+  return props.width || "auto";
+}, function (props) {
+  return props.height || "auto";
+}, function (props) {
+  return props.top || "0";
+}, function (props) {
+  return props.minWidth || "auto";
+}, function (props) {
+  return props.left || "auto";
+}, function (props) {
+  return props.right || "auto";
+}, function (props) {
+  return props.overflow || "auto";
+});
+var FlexSlider = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "SouvenirForm__FlexSlider",
+  componentId: "sc-1929zk0-2"
+})(["background-color:", ";display:", ";position:", ";flex-direction:", ";align-items:", ";justify-content:", ";width:", ";top:", ";min-width:", ";left:", ";right:", ";overflow-x:hidden;overflow-y:", ";z-index:", ";padding:", ";"], function (props) {
+  return props.bgColor || "auto";
+}, function (props) {
+  return props.display || "flex";
+}, function (props) {
+  return props.position || "auto";
+}, function (props) {
+  return props.direction || "column";
+}, function (props) {
+  return props.alignItems || "center";
+}, function (props) {
+  return props.justify || "center";
+}, function (props) {
+  return props.width || "auto";
+}, function (props) {
+  return props.top || "0";
+}, function (props) {
+  return props.minWidth || "auto";
+}, function (props) {
+  return props.left || "auto";
+}, function (props) {
+  return props.right || "auto";
+}, function (props) {
+  return props.overflowY || "visible";
+}, function (props) {
+  return props.zIndex || "0";
+}, function (props) {
+  return props.padding || "0";
+});
+var ColorBox = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.span.withConfig({
+  displayName: "SouvenirForm__ColorBox",
+  componentId: "sc-1929zk0-3"
+})(["display:", ";width:13px;height:13px;background-color:", ";border:1px solid black;margin-left:5px;border-radius:3px;cursor:", ";&:hover{border:", ";}"], function (props) {
+  return props.display || "flex";
+}, function (props) {
+  return props.color || "white";
+}, function (props) {
+  return props.cursor || "pointer";
+}, function (props) {
+  return props.hover || "3px solid black";
+});
+var SouvenirText = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2.withConfig({
+  displayName: "SouvenirForm__SouvenirText",
+  componentId: "sc-1929zk0-4"
+})(["font-size:", ";color:", ";font-style:", ";"], function (props) {
+  return props.size || "1rem";
+}, function (props) {
+  return props.color || "black";
+}, function (props) {
+  return props.fontStyle || "normal";
+});
+var TextArea = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.textarea.withConfig({
+  displayName: "SouvenirForm__TextArea",
+  componentId: "sc-1929zk0-5"
+})(["resize:none;"]);
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form.withConfig({
+  displayName: "SouvenirForm__Form",
+  componentId: "sc-1929zk0-6"
+})(["display:flex;"]);
+
+var SouvenirForm =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SouvenirForm, _Component);
+
+  function SouvenirForm() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, SouvenirForm);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SouvenirForm)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      name: "",
+      location: "",
+      color: "",
+      audio: "",
+      souvenirStory: ""
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "pickColor", function (color) {
+      _this.setState({
+        color: color
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChange", function (e) {
+      _this.setState(_defineProperty({}, e.target.id, e.target.value));
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "nextPage", function () {
+      document.getElementById('pageTwo').setAttribute('style', 'left:0');
+      document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:visible');
+      document.getElementById('next-page').setAttribute('style', "display:none"); //For Firefox
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "prevPage", function () {
+      document.getElementById('pageTwo').setAttribute('style', 'left:100vw');
+      document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:hidden');
+      document.getElementById('next-page').setAttribute('style', "display:auto");
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.addSouvenir(_this.state);
+    });
+
+    return _this;
+  }
+
+  _createClass(SouvenirForm, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexSlider, {
+        id: "flex-slider-wrapper",
+        direction: "row",
+        minWidth: "100%",
+        position: "relative",
+        justify: "center",
+        overflow: "hidden",
+        overflowY: "hidden",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        minWidth: "100%",
+        position: "relative",
+        overflow: "hidden",
+        id: "pageOne",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
+        type: "text",
+        placeholder: "Name",
+        id: "name",
+        onChange: this.handleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
+        type: "text",
+        placeholder: "Location",
+        id: "location",
+        onChange: this.handleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
+        type: "text",
+        placeholder: "Add audio link",
+        id: "audio",
+        onChange: this.handleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        direction: "row",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        direction: "row",
+        overflow: "visible",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: this
+      }, " Color:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        cursor: "auto",
+        hover: "auto",
+        color: this.state.color,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        direction: "row",
+        width: "100%",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        color: "#DC143C",
+        onClick: function onClick() {
+          return _this2.pickColor("#DC143C");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        color: "#87CEFA",
+        onClick: function onClick() {
+          return _this2.pickColor("#87CEFA");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        color: "#1E90FF",
+        onClick: function onClick() {
+          return _this2.pickColor("#1E90FF");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        color: "#00FF7F",
+        onClick: function onClick() {
+          return _this2.pickColor("#00FF7F");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 135
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
+        color: "#FA8072",
+        onClick: function onClick() {
+          return _this2.pickColor("#FA8072");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "button",
+        id: "next-page",
+        onClick: this.nextPage,
+        value: "Next page",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        id: "pageTwo",
+        zIndex: "999",
+        position: "absolute",
+        padding: "1200px",
+        left: "100vw",
+        minWidth: "100%",
+        bgColor: this.state.color || "white",
+        overflow: "visible",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        bgColor: "black",
+        minWidth: "100%",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SouvenirText, {
+        size: "1.5rem",
+        color: "white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }, this.state.location)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 147
+        },
+        __self: this
+      }, "Write your story:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SouvenirText, {
+        fontStyle: "oblique",
+        color: "white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 148
+        },
+        __self: this
+      }, this.state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextArea, {
+        cols: "50",
+        rows: "15",
+        id: "souvenirStory",
+        onChange: this.handleChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        direction: "row",
+        justify: "space-around",
+        minWidth: "100%",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 150
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "button",
+        id: "prev-page",
+        onClick: this.prevPage,
+        value: "Previous page",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Submit story",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 152
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
+        id: "collectionListPage",
+        zIndex: "1000",
+        position: "absolute",
+        padding: "10px",
+        left: "-100vw",
+        minWidth: "100%",
+        bgColor: "red",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MySouvenirs__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        souvenirs: this.props.souvenirs,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        },
+        __self: this
+      }))));
+    }
+  }]);
+
+  return SouvenirForm;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./images/scroll-arrow-light.png":
+/*!***************************************!*\
+  !*** ./images/scroll-arrow-light.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -104,7 +1104,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./pages/index.js");
+/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/App */ "./components/App.js");
 var _jsxFileName = "/Users/brandontsegai/Desktop/myProjects/School/souvenir/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -148,7 +1148,7 @@ function (_Component) {
           lineNumber: 7
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(___WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
@@ -177,6 +1177,17 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 /***/ }),
 
+/***/ "next/link":
+/*!****************************!*\
+  !*** external "next/link" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/link");
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -185,6 +1196,17 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

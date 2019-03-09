@@ -1,17 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const ElementContainer = styled.div`
+display:flex;
+justify-content:${ props => (props.center ? "center" : props.end ? "flex-end":"flex-start")};
+padding:${ props => (props.center ? 0 : props.end ? "0 20px 0 0":"0 0 0 20px")};
+font-family: 'Ubuntu', sans-serif;
+`
+
 const MySouvenirs = ({souvenirs}) => {
 
-  const souvenirList = posts.map( post => {
-    if (post!== 0){
+  const souvenirList = souvenirs.map( souvenir => {
+    if (souvenir!== 0){
       return (
-        <div className="post" key={post.id}>
-        <WrapperContainer>
-          <ElementContainer><p>{post.author}</p></ElementContainer>
-          <ElementContainer center><h3>{post.content}</h3></ElementContainer>
-          <ElementContainer end><i>{post.date}</i></ElementContainer>
-        </WrapperContainer>
+        <div className="post" key={Math.random()}>
+          <div>
+            <ElementContainer><p>{souvenir.name}</p></ElementContainer>
+            <ElementContainer center><h3>{souvenir.location}</h3></ElementContainer>
+            <ElementContainer center><i>{souvenir.color}</i></ElementContainer>
+            <ElementContainer center><i>{souvenir.souvenirStory}</i></ElementContainer>
+          </div>
         </div>
       )
     }
@@ -20,7 +28,7 @@ const MySouvenirs = ({souvenirs}) => {
 
   return (
     <div>
-      
+     {souvenirList}
     </div>
   )
 }
@@ -28,28 +36,3 @@ const MySouvenirs = ({souvenirs}) => {
 export default MySouvenirs
 
 
-
-const Posts = ({posts, postAuthor}) => {
-
-    const postList = posts.map(post => {
-      if (post!== 0){
-        return (
-          <div className="post" key={post.id}>
-          <WrapperContainer>
-            <ElementContainer><p>{post.author}</p></ElementContainer>
-            <ElementContainer center><h3>{post.content}</h3></ElementContainer>
-            <ElementContainer end><i>{post.date}</i></ElementContainer>
-          </WrapperContainer>
-          </div>
-        )
-      }
-      else {return "No posts!"}
-    })
-    return (
-      <div>
-        <div className="ninja-list">
-        {postList}
-        </div>
-      </div>
-    )
-  }
