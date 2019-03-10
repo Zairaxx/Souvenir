@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled, {keyframes} from 'styled-components'
 import MySouvenirs from '../components/MySouvenirs'
+
 const InputField = styled.input`
     text-align:center;
     margin-bottom:2em;
@@ -24,7 +25,7 @@ const Flex = styled.div`
 `
 
 const FlexSlider = styled.div`
-    background-color:${props => props.bgColor || "auto" };
+    background-color:${props => props.bgColor || "#EAF" };
     display:${props => props.display || "flex" };
     position: ${props => props.position || "auto" };
     flex-direction: ${props => props.direction || "column"};
@@ -95,62 +96,58 @@ export default class SouvenirForm extends Component {
         
     }
 
-    nextPage = () => {
-        document.getElementById('pageTwo').setAttribute('style', 'left:0');
-        document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:visible');
-        document.getElementById('next-page').setAttribute('style', `display:none`) //For Firefox
-    }
-
-    prevPage = () => {
-        document.getElementById('pageTwo').setAttribute('style', 'left:100vw');
-        document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:hidden');
-        document.getElementById('next-page').setAttribute('style', `display:auto`)
-    }
-
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addSouvenir(this.state);
+        console.log(this.state)
+        this.setState({
+            createSouvenir:!this.state.createSouvenir
+        })
       }
 
   render() {
+      if(this.props.createSouvenir === false) {
+          return null
+      }
+      else {
     return (
-        <FlexSlider id="flex-slider-wrapper"direction="row" minWidth="100%" position="relative" justify="center" overflow="hidden" overflowY="hidden">
+        <FlexSlider id="flex-slider-wrapper" direction="row" minWidth="100vw" position="relative" justify="center" bgColor={(this.state.color || "white")} overflow="visible" overflowY="hidden">
 
             {//                  ---START OF FIRST PAGE---
             }
             <Form onSubmit={this.handleSubmit}>
-            <Flex minWidth="100%" position="relative" overflow="hidden" id="pageOne">
+            <Flex minWidth="100%" position="relative" id="pageOne">
                 <InputField type="text" placeholder="Name" id="name" onChange={this.handleChange}/>
                 <InputField type="text" placeholder="Location" id="location" onChange={this.handleChange}/>
-                <InputField type="text" placeholder="Add audio link" id="audio" onChange={this.handleChange}/>
-                <Flex direction="row">
+                <InputField type="link" placeholder="Add audio link" id="audio" onChange={this.handleChange}/>
+                <Flex direction="column">
                     <Flex direction="row" overflow="visible">
                         <h3> Color:</h3>
                         <ColorBox cursor="auto" hover="auto" color={this.state.color}/>
                     </Flex>
                     <Flex direction="row" width="100%">
-                    <ColorBox color="#DC143C" onClick={() => (this.pickColor("#DC143C"))}/>
-                    <ColorBox color="#87CEFA" onClick={() => (this.pickColor("#87CEFA"))}/>
-                    <ColorBox color="#1E90FF" onClick={() => (this.pickColor("#1E90FF"))}/>
-                    <ColorBox color="#00FF7F" onClick={() => (this.pickColor("#00FF7F"))}/>
-                    <ColorBox color="#FA8072" onClick={() => (this.pickColor("#FA8072"))}/>
+                        <ColorBox color="#DC143C" onClick={() => (this.pickColor("#DC143C"))}/>
+                        <ColorBox color="#87CEFA" onClick={() => (this.pickColor("#87CEFA"))}/>
+                        <ColorBox color="#1E90FF" onClick={() => (this.pickColor("#1E90FF"))}/>
+                        <ColorBox color="#00FF7F" onClick={() => (this.pickColor("#00FF7F"))}/>
+                        <ColorBox color="#FA8072" onClick={() => (this.pickColor("#FA8072"))}/>
                     </Flex>
-                </Flex>
-                <input type="button" id="next-page" onClick={this.nextPage} value="Next page"></input>
-            </Flex>
-            {//              ---END OF FIRST PAGE / START OF 2ND PAGE---
-            }
-            <Flex id="pageTwo" zIndex="999" position="absolute" padding="1200px" left="100vw" minWidth="100%" bgColor={(this.state.color || "white")} overflow="visible">
-                <Flex bgColor="black" minWidth="100%">
+                    <Flex bgColor="black" minWidth="100%">
                     <SouvenirText size="1.5rem" color="white">{this.state.location}</SouvenirText>
                 </Flex>
                 <h2>Write your story:</h2>
                 <SouvenirText fontStyle="oblique" color="white">{this.state.name}</SouvenirText>
                 <TextArea cols="50" rows="15"id="souvenirStory" onChange={this.handleChange}></TextArea>
                 <Flex direction="row" justify="space-around" minWidth="100%">
-                    <input type="button" id="prev-page" onClick={this.prevPage} value="Previous page"></input>
                     <input type="submit" value="Submit story"></input>
                 </Flex>
+
+                </Flex>
+            </Flex>
+            {//              ---END OF FIRST PAGE / START OF 2ND PAGE---
+            }
+            <Flex id="pageTwo" zIndex="999" position="relative" padding="1200px" left="100vw" minWidth="100%" bgColor={(this.state.color || "black")} overflow="visible">
+                
             </Flex>
              {//              --- SOUVENIR COLLECTION ("Souvenirs")---
             }
@@ -159,6 +156,6 @@ export default class SouvenirForm extends Component {
             </Flex>
             </Form>
         </FlexSlider>
-    )
+    )}
   }
 }

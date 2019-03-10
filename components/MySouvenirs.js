@@ -8,7 +8,18 @@ padding:${ props => (props.center ? 0 : props.end ? "0 20px 0 0":"0 0 0 20px")};
 font-family: 'Ubuntu', sans-serif;
 `
 
-const MySouvenirs = ({souvenirs}) => {
+const HeroBg = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  background-image: linear-gradient(to right, #000 , #784343);
+  min-width:100vw;
+  min-height:100vh;
+  overflow:visible;
+`
+
+const MySouvenirs = ({souvenirs, showCollection}) => {
 
   const souvenirList = souvenirs.map( souvenir => {
     if (souvenir!== 0){
@@ -23,14 +34,17 @@ const MySouvenirs = ({souvenirs}) => {
         </div>
       )
     }
-    else {return "No posts!"}
+    else {return null}
   })
-
+if(showCollection === true){
   return (
-    <div>
+    <HeroBg>
      {souvenirList}
-    </div>
-  )
+    </HeroBg>
+  )}
+  else {
+    return null
+  }
 }
 
 export default MySouvenirs

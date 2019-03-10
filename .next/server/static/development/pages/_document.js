@@ -166,6 +166,9 @@ function (_Document) {
         },
         __self: this
       }, this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
+        style: {
+          margin: "0px"
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18

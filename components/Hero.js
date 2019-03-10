@@ -1,12 +1,12 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-
+import Fade from 'react-reveal/Fade'
 
 const HeroText  = styled.h1`
-    @import url('https://fonts.googleapis.com/css?family=Oswald');
-    font-family: 'Oswald', cursive;
-    font-size:5.6rem;
-    color:#BFF;
+    @import url('https://fonts.googleapis.com/css?family=Cinzel');
+    font-family: 'Cinzel', serif;
+    font-size:3.6rem;
+    color: #BBB;
     text-align:center;
 `
 const HeroBg = styled.div`
@@ -14,19 +14,22 @@ const HeroBg = styled.div`
   flex-direction:column;
   justify-content:space-around;
   align-items:center;
-
-  background:#000;
+  background-image: linear-gradient(to right, #000 , #784343);
   min-width:100vw;
-  min-height:105vh;
-  position:relative;
+  min-height:100vh;
+  overflow:visible;
 `
 
 const scrollIt = keyframes`
-    from {
-      transform:translateY(10px);
+    0% {
+      transform:translateY(0px);
     }
-    to {
-        transform:translateY(50px);
+    50% {
+        transform:translateY(35px);
+    }
+
+    100% {
+      transform:translate(Y)
     }
 `
 
@@ -35,28 +38,75 @@ const HeroSlogan = styled.h2`
     font-family: 'Amatic SC', cursive;
     color:white;
     text-align:center;
+    margin:-1px;
+
 `
 const ScrollDown = styled.div`
 
-  animation: ${scrollIt} 1s linear infinite;
+  animation: ${scrollIt} 1.5s linear infinite;
+`
+const NavSite = styled.div`
+position:relative;
+background-image:linear-gradient(to right, #000000 , #434343);
+min-width:100vw;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+align-items:center;
 `
 
+const NavItem = styled.div `
+margin:0px;
+border:1px solid white;
+border-radius:10px;
+min-width:160px;
+min-height:50px;
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+margin:10px 10px;
+`
 
-const Hero = () => {
+const Hero = ({scrollFade, getCollection, showCollection, createSouvenir, newSouvenir}) => {
   const imgSrc = require('../images/scroll-arrow-light.png');
+  if(showCollection === false && createSouvenir == false){
   return (
-      <HeroBg>
-        <div>
-          <HeroText> Souvenir </HeroText>
+    <Fade>
+    <div>
+        <HeroBg>
+          <div>
+            <HeroText>
+              <Fade> Souvenir </Fade></HeroText>
+              <HeroSlogan>
+              <br/>
+              Write it down. <br/>Read it out loud. Listen closely. <br/><br/>Feel it all over again.
+            </HeroSlogan>
+          </div>
+          <ScrollDown>
+            <img src={imgSrc} alt="Scroll down to view more" width="120px" height="40px"/>
+          </ScrollDown>
+        </HeroBg>
+        <NavSite>
           <HeroSlogan>
-            <br/>
-            Write it down. <br/>Read it out loud. Listen closely. <br/><br/>Feel it all over again.</HeroSlogan>
-        </div>
-        <ScrollDown>
-        <img src={imgSrc} alt="Scroll down to view more" width="120px" height="40px"/>
-        </ScrollDown>
-      </HeroBg>
-  )
+          <Fade right cascade>
+                Start a new journey
+              <NavItem onClick={newSouvenir}>Create new Souvenir</NavItem>
+            </Fade>
+
+            <Fade right cascade> Shoot a glimpse back on your memories.
+          <NavItem onClick={getCollection}>Collection</NavItem>
+            </Fade>
+          </HeroSlogan>
+        </NavSite>
+    </div>
+    </Fade>
+  )}
+  else {
+    return null
+  }
 }
 
 export default Hero

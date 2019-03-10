@@ -18,24 +18,13 @@ const Flex = styled.div`
     right: ${props => props.right || "auto" };
     overflow: ${props => props.overflow || "auto" };
     margin: ${props => props.margin || "auto" };
-`
-
-const NavItem = styled.div `
-margin:0px;
-border:1px solid black;
-width:100%;
-min-height:50px;
-text-align:center;
-display:flex;
-justify-content:center;
-align-items:center;
-cursor:pointer;
+    min-height: ${props => props.minHeight || "auto" };
 `
 
 const Navigation = ({getCollection}) => {
 
   return (
-    <Flex direction="row" minWidth="100%" justify="space-around" margin="0 10px">
+    <Flex direction="row-reverse" minWidth="20vw" minHeight="100vh" justify="center" margin="0">
       <NavItem>
         Create new souvenir
       </NavItem>

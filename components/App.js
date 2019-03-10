@@ -4,7 +4,9 @@ import SouvenirForm from '../components/SouvenirForm';
 import Navigation from '../components/Navigation';
 import MySouvenirs from '../components/MySouvenirs';
 import styled from 'styled-components'
+import config from 'react-reveal/globals';
 
+config({ ssrFadeout: true });
 
 const Flex = styled.div`
     background-color:${props => props.bgColor || "auto" };
@@ -29,7 +31,9 @@ export default class App extends Component {
     state={
         souvenirs:[
             {name:"Vietnam livin", location:"Ho chi Minh", color:"blue", audio:"www.spotify.com", souvenirStory:"I had fun."},
-        ]
+        ],
+        showCollection:false,
+        createSouvenir:true,
     }
     addSouvenir = (souvenir) => {
 
@@ -41,26 +45,28 @@ export default class App extends Component {
         })
     }
 
-    getCollection = () => {
-        console.log("start function");
-        document.getElementById('pageTwo').setAttribute('style', 'left:200vw');
-        document.getElementById('pageOne').setAttribute('style', 'left:100vw');
-        document.getElementById('flex-slider-wrapper').setAttribute('style', 'overflow:visible');
-        document.getElementById('collectionListPage').setAttribute('style', `left:0`) //For Firefox
-        console.log("finish function");
+    getCollection = (e) => {
+        this.setState({
+            showCollection:!this.state.showCollection
+        })
+        
     }
 
-
-
+    newSouvenir = (e) => {
+        this.setState({
+            createSouvenir:!this.state.createSouvenir
+        })
+        
+    }
     render() {
         return (
-            <Flex justify="space-between" height="100vh" overflow="scroll">
-                <Flex overflow="scroll">
-                <Hero/>
-                <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir}/>
+             <Flex justify="space-between" height="auto" overflow="visible">
+                    <Hero scrollFade={this.scrollFade} getCollection={this.getCollection} showCollection={this.state.showCollection} createSouvenir={this.state.createSouvenir} newSouvenir={this.newSouvenir}/>
+                    <Flex direction="row">
+                    <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir} createSouvenir={this.state.createSouvenir}/>
+                    <MySouvenirs souvenirs={this.state.souvenirs} showCollection={this.state.showCollection}/>
+                    </Flex>
             </Flex>
-            <Navigation getCollection={this.getCollection}/>
-        </Flex>
     )
   }
 }
