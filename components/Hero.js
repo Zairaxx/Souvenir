@@ -6,7 +6,7 @@ const HeroText  = styled.h1`
     @import url('https://fonts.googleapis.com/css?family=Cinzel');
     font-family: 'Cinzel', serif;
     font-size:3.6rem;
-    color: #BBB;
+    color: #FFF;
     text-align:center;
 `
 const HeroBg = styled.div`
@@ -14,7 +14,7 @@ const HeroBg = styled.div`
   flex-direction:column;
   justify-content:space-around;
   align-items:center;
-  background-image: linear-gradient(to right, #000 , #784343);
+  background-image: linear-gradient(to right, #a8c0ff , #141E30);
   min-width:100vw;
   min-height:100vh;
   overflow:visible;
@@ -47,7 +47,7 @@ const ScrollDown = styled.div`
 `
 const NavSite = styled.div`
 position:relative;
-background-image:linear-gradient(to right, #000000 , #434343);
+background-image:linear-gradient(to left, #000000 , #434343);
 min-width:100vw;
 min-height:100vh;
 display:flex;
@@ -68,6 +68,10 @@ justify-content:center;
 align-items:center;
 cursor:pointer;
 margin:10px 10px;
+&:hover {
+  background-color:white;
+  color:black;
+}
 `
 
 const Hero = ({scrollFade, getCollection, showCollection, createSouvenir, newSouvenir}) => {
@@ -82,7 +86,7 @@ const Hero = ({scrollFade, getCollection, showCollection, createSouvenir, newSou
               <Fade> Souvenir </Fade></HeroText>
               <HeroSlogan>
               <br/>
-              Write it down. <br/>Read it out loud. Listen closely. <br/><br/>Feel it all over again.
+              Write it down. <br/>Read it out loud. Listen closely. <br/><br/>Live it. All over again.
             </HeroSlogan>
           </div>
           <ScrollDown>
@@ -95,8 +99,7 @@ const Hero = ({scrollFade, getCollection, showCollection, createSouvenir, newSou
                 Start a new journey
               <NavItem onClick={newSouvenir}>Create new Souvenir</NavItem>
             </Fade>
-
-            <Fade right cascade> Shoot a glimpse back on your memories.
+            <Fade right cascade> Take a glimpse at your memories.
           <NavItem onClick={getCollection}>Collection</NavItem>
             </Fade>
           </HeroSlogan>

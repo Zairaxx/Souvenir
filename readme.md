@@ -8,7 +8,10 @@ Solutions: 1. Create collection as a part of SouvenirForm, but put it in left:10
 
 
 To do list in priority-order:
-- Fix navigation to work properly.
+- Focus on SouvenirForm.js.
+    - Change background to different gradient options.
+    - On submit = Hide submit button, show buttons to adding another souvenir or showing collection.
+- Fix navigation to work properly. DONE
 - Dynamic navigation depending on device.
 - Map view.
 - Collection view of souvenirs.

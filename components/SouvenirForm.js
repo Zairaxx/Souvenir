@@ -99,11 +99,7 @@ export default class SouvenirForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addSouvenir(this.state);
-        console.log(this.state)
-        this.setState({
-            createSouvenir:!this.state.createSouvenir
-        })
-      }
+    }
 
   render() {
       if(this.props.createSouvenir === false) {
@@ -139,20 +135,11 @@ export default class SouvenirForm extends Component {
                 <SouvenirText fontStyle="oblique" color="white">{this.state.name}</SouvenirText>
                 <TextArea cols="50" rows="15"id="souvenirStory" onChange={this.handleChange}></TextArea>
                 <Flex direction="row" justify="space-around" minWidth="100%">
-                    <input type="submit" value="Submit story"></input>
+                    <input id="submit-souvenir" type="submit" value="Submit story"></input>
+                    <input id="get-collection" type="button" value="Show all souvenirs" onClick={this.props.getCollection}></input>
                 </Flex>
 
                 </Flex>
-            </Flex>
-            {//              ---END OF FIRST PAGE / START OF 2ND PAGE---
-            }
-            <Flex id="pageTwo" zIndex="999" position="relative" padding="1200px" left="100vw" minWidth="100%" bgColor={(this.state.color || "black")} overflow="visible">
-                
-            </Flex>
-             {//              --- SOUVENIR COLLECTION ("Souvenirs")---
-            }
-            <Flex id="collectionListPage" zIndex="1000" position="absolute" padding="10px" left="-100vw" minWidth="100%" bgColor={("red")}>
-                <MySouvenirs souvenirs={this.props.souvenirs}/>
             </Flex>
             </Form>
         </FlexSlider>

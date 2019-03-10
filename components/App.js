@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Hero from '../components/Hero';
 import SouvenirForm from '../components/SouvenirForm';
-import Navigation from '../components/Navigation';
 import MySouvenirs from '../components/MySouvenirs';
 import styled from 'styled-components'
 import config from 'react-reveal/globals';
@@ -30,10 +29,11 @@ export default class App extends Component {
 
     state={
         souvenirs:[
-            {name:"Vietnam livin", location:"Ho chi Minh", color:"blue", audio:"www.spotify.com", souvenirStory:"I had fun."},
+            {name:"Vietnam livin", location:"Ho chi Minh, Vietnam", color:"blue", audio:"www.spotify.com", souvenirStory:"I had fun traveling for a week. I met cool people and had great food, such as Banh Mi. Will definitely go again."},
+            {name:"Chile during Christmas", location:"Valparaiso, Chile", color:"blue", audio:"www.spotify.com", souvenirStory:"I had fun traveling for a week. I met cool people and had great food, such as ceviché. Will definitely go again."}
         ],
         showCollection:false,
-        createSouvenir:true,
+        createSouvenir:false,
     }
     addSouvenir = (souvenir) => {
 
@@ -63,7 +63,7 @@ export default class App extends Component {
              <Flex justify="space-between" height="auto" overflow="visible">
                     <Hero scrollFade={this.scrollFade} getCollection={this.getCollection} showCollection={this.state.showCollection} createSouvenir={this.state.createSouvenir} newSouvenir={this.newSouvenir}/>
                     <Flex direction="row">
-                    <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir} createSouvenir={this.state.createSouvenir}/>
+                    <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir} newSouvenir={this.state.newSouvenir} createSouvenir={this.state.createSouvenir} getCollection={this.getCollection}/>
                     <MySouvenirs souvenirs={this.state.souvenirs} showCollection={this.state.showCollection}/>
                     </Flex>
             </Flex>
