@@ -185,7 +185,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SouvenirForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
         souvenirs: this.state.souvenirs,
         addSouvenir: this.addSouvenir,
-        newSouvenir: this.state.newSouvenir,
+        newSouvenir: this.newSouvenir,
         createSouvenir: this.state.createSouvenir,
         getCollection: this.getCollection,
         __source: {
@@ -196,6 +196,7 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MySouvenirs__WEBPACK_IMPORTED_MODULE_3__["default"], {
         souvenirs: this.state.souvenirs,
         showCollection: this.state.showCollection,
+        newSouvenir: this.newSouvenir,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 67
@@ -250,7 +251,7 @@ var HeroText = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1.with
 var HeroBg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Hero__HeroBg",
   componentId: "sc-1kp3y8c-1"
-})(["display:flex;flex-direction:column;justify-content:space-around;align-items:center;background-image:linear-gradient(to right,#a8c0ff,#141E30);min-width:100vw;min-height:100vh;overflow:visible;"]);
+})(["display:flex;flex-direction:column;justify-content:space-around;align-items:center;background-image:linear-gradient(to left,#403A3E,#141E30);min-width:100vw;min-height:100vh;overflow:visible;"]);
 var scrollIt = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject());
 var HeroSlogan = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2.withConfig({
   displayName: "Hero__HeroSlogan",
@@ -263,7 +264,7 @@ var ScrollDown = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var NavSite = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Hero__NavSite",
   componentId: "sc-1kp3y8c-4"
-})(["position:relative;background-image:linear-gradient(to left,#000000,#434343);min-width:100vw;min-height:100vh;display:flex;flex-direction:column;justify-content:space-around;align-items:center;"]);
+})(["position:relative;background-image:linear-gradient(to left,#403A3E,#141E30);min-width:100vw;min-height:100vh;display:flex;flex-direction:column;justify-content:space-around;align-items:center;"]);
 var NavItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Hero__NavItem",
   componentId: "sc-1kp3y8c-5"
@@ -729,6 +730,8 @@ function (_Component) {
       e.preventDefault();
 
       _this.props.addSouvenir(_this.state);
+
+      _this.props.newSouvenir();
     });
 
     return _this;
@@ -753,14 +756,14 @@ function (_Component) {
           overflowY: "hidden",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 110
+            lineNumber: 111
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
           onSubmit: this.handleSubmit,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114
+            lineNumber: 115
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
@@ -769,7 +772,7 @@ function (_Component) {
           id: "pageOne",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115
+            lineNumber: 116
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
@@ -779,7 +782,7 @@ function (_Component) {
           onChange: this.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 117
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
@@ -789,7 +792,7 @@ function (_Component) {
           onChange: this.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 118
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputField, {
@@ -799,14 +802,14 @@ function (_Component) {
           onChange: this.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 119
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
           direction: "column",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 120
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
@@ -814,13 +817,13 @@ function (_Component) {
           overflow: "visible",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 120
+            lineNumber: 121
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121
+            lineNumber: 122
           },
           __self: this
         }, " Color:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -829,7 +832,7 @@ function (_Component) {
           color: this.state.color,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122
+            lineNumber: 123
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
@@ -837,7 +840,7 @@ function (_Component) {
           width: "100%",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124
+            lineNumber: 125
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -847,7 +850,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 125
+            lineNumber: 126
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -857,7 +860,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126
+            lineNumber: 127
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -867,7 +870,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127
+            lineNumber: 128
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -877,7 +880,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 129
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColorBox, {
@@ -887,7 +890,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 129
+            lineNumber: 130
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
@@ -895,7 +898,7 @@ function (_Component) {
           minWidth: "100%",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 131
+            lineNumber: 132
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SouvenirText, {
@@ -903,13 +906,13 @@ function (_Component) {
           color: "white",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 132
+            lineNumber: 133
           },
           __self: this
         }, this.state.location)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134
+            lineNumber: 135
           },
           __self: this
         }, "Write your story:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SouvenirText, {
@@ -917,7 +920,7 @@ function (_Component) {
           color: "white",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 135
+            lineNumber: 136
           },
           __self: this
         }, this.state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextArea, {
@@ -927,7 +930,7 @@ function (_Component) {
           onChange: this.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136
+            lineNumber: 137
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Flex, {
@@ -936,7 +939,7 @@ function (_Component) {
           minWidth: "100%",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137
+            lineNumber: 138
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -945,7 +948,7 @@ function (_Component) {
           value: "Submit story",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 139
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -955,7 +958,7 @@ function (_Component) {
           onClick: this.props.getCollection,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139
+            lineNumber: 140
           },
           __self: this
         }))))));

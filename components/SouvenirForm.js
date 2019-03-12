@@ -99,6 +99,7 @@ export default class SouvenirForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addSouvenir(this.state);
+        this.props.newSouvenir();
     }
 
   render() {

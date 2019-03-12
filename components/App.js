@@ -63,8 +63,8 @@ export default class App extends Component {
              <Flex justify="space-between" height="auto" overflow="visible">
                     <Hero scrollFade={this.scrollFade} getCollection={this.getCollection} showCollection={this.state.showCollection} createSouvenir={this.state.createSouvenir} newSouvenir={this.newSouvenir}/>
                     <Flex direction="row">
-                    <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir} newSouvenir={this.state.newSouvenir} createSouvenir={this.state.createSouvenir} getCollection={this.getCollection}/>
-                    <MySouvenirs souvenirs={this.state.souvenirs} showCollection={this.state.showCollection}/>
+                    <SouvenirForm souvenirs={this.state.souvenirs} addSouvenir={this.addSouvenir} newSouvenir={this.newSouvenir} createSouvenir={this.state.createSouvenir} getCollection={this.getCollection}/>
+                    <MySouvenirs souvenirs={this.state.souvenirs} showCollection={this.state.showCollection} newSouvenir={this.newSouvenir}/>
                     </Flex>
             </Flex>
     )

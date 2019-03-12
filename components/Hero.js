@@ -14,7 +14,7 @@ const HeroBg = styled.div`
   flex-direction:column;
   justify-content:space-around;
   align-items:center;
-  background-image: linear-gradient(to right, #a8c0ff , #141E30);
+  background-image: linear-gradient(to left, #403A3E , #141E30);
   min-width:100vw;
   min-height:100vh;
   overflow:visible;
@@ -47,7 +47,7 @@ const ScrollDown = styled.div`
 `
 const NavSite = styled.div`
 position:relative;
-background-image:linear-gradient(to left, #000000 , #434343);
+background-image:linear-gradient(to left, #403A3E , #141E30);
 min-width:100vw;
 min-height:100vh;
 display:flex;
